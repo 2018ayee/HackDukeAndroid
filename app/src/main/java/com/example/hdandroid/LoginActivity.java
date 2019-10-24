@@ -2,7 +2,9 @@ package com.example.hdandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,10 +31,16 @@ public class LoginActivity extends AppCompatActivity {
         EditText category = (EditText) findViewById(R.id.category);
         EditText email = (EditText) findViewById(R.id.email);
 
-        User user = new User(firstName.getText().toString(), lastName.getText().toString(), pronouns.getText().toString(),
+        User user = new User(firstName.getText().toString(), lastName.getText().toString(), email.getText().toString(), pronouns.getText().toString(),
                 school.getText().toString(), classYear.getText().toString(), category.getText().toString());
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("hd-code-for-good").child(email.getText().toString()).setValue(user);
+        mDatabase.child(firstName.getText().toString() + " " + lastName.getText().toString()).setValue(user);
+
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.is_checked_in), "true");
+        editor.commit();
+
         startActivity(new Intent(LoginActivity.this, CheckInSuccessActivity.class));
     }
 }

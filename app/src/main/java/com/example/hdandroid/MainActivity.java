@@ -14,6 +14,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import android.content.Intent;
+import android.util.Log;
+import android.view.View;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView countdown;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
         countdown = findViewById(R.id.countdown);
         checkInButton = findViewById(R.id.checkInButton);
 
@@ -42,6 +47,22 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return result ;
+=======
+
+        Button mButton = findViewById(R.id.checkin);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("Clicked", "checkin clicked");
+                toCheckIn(v);
+            }
+        });
+    }
+
+    public void toCheckIn(View view) {
+        Log.d("Clicked", "checkin clicked");
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+>>>>>>> Change app icon and name
     }
 
     /**

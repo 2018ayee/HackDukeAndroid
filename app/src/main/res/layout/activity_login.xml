@@ -152,7 +152,6 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
-        android:enabled="false"
         android:background="#4F50F5"
         android:textColor="@android:color/white"
         android:text="Submit"
@@ -178,4 +177,5 @@
         app:layout_constraintStart_toStartOf="@+id/email"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
