@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -42,12 +41,10 @@
         android:layout_marginLeft="34dp"
         android:layout_marginEnd="144dp"
         android:layout_marginRight="144dp"
-        android:layout_marginBottom="39dp"
         android:text="Code for Good 2019"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:fontFamily="@font/montserrat"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,14 +56,31 @@
         android:layout_height="346dp"
         android:layout_marginStart="67dp"
         android:layout_marginLeft="67dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="67dp"
         android:layout_marginRight="67dp"
         app:layout_constrainedHeight="false"
-        app:layout_constraintBottom_toTopOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/hd_hourglass" />
+
+    <Button
+        android:id="@+id/checkInButton"
+        android:layout_width="173dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginBottom="36dp"
+        android:background="#5052F6"
+        android:text="CHECK IN"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -74,48 +88,34 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="96dp"
         android:layout_marginRight="96dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="22dp"
         android:text="You Have Checked In!"
         android:textColor="@android:color/black"
         android:textSize="21sp"
         app:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/checkInButton"
-        android:layout_width="173dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginRight="116dp"
-        android:layout_marginBottom="22dp"
-        android:background="#5052F6"
-        android:text="CHECK IN"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countdown"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/countdown"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/countdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="556dp"
+        android:layout_marginBottom="112dp"
         android:text="Loading..."
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" /><![CDATA[
+        app:layout_constraintVertical_bias="1.0" /><![CDATA[
 
 
 
@@ -134,4 +134,3 @@
 
 ]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
