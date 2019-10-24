@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "814323364024",
+    "firebase_url": "https://hd-code-for-good.firebaseio.com",
+    "project_id": "hd-code-for-good",
+    "storage_bucket": "hd-code-for-good.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814323364024:android:b53cca410094c05593444d",
+        "android_client_info": {
+          "package_name": "com.example.hdandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814323364024-e1eqek9uv7b264p6e5p76559kg9d75gh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADaERuo-U5M7rmtkqHHBMVeP0r3paAgQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814323364024-e1eqek9uv7b264p6e5p76559kg9d75gh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "814323364024-3hj88r8ik55331p40qn9uoepm400v1fv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "HackDuke.HD-Code-for-Good"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
