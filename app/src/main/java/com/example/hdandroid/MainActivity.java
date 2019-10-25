@@ -3,6 +3,7 @@ package com.example.hdandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     TextView countdown;
+    TextView alreadyCheckedIn;
     Button checkInButton;
 
 
@@ -28,9 +30,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         countdown = findViewById(R.id.countdown);
-        checkInButton = findViewById(R.id.checkInButton);
+        alreadyCheckedIn = findViewById(R.id.textView6);
+        checkInButton = findViewById(R.id.checkin);
+
+        checkInButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("Clicked", "checkin clicked");
+                toCheckIn(v);
+            }
+        });
+
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("settings", 0);
+        String isChecked = settings.getString("is_checked_in", "false");
+        if(isChecked.equals("true")) {
+            checkInButton.setVisibility(View.GONE);
+            alreadyCheckedIn.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -46,23 +62,13 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
 
         }
-        return result ;
-=======
-
-        Button mButton = findViewById(R.id.checkin);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("Clicked", "checkin clicked");
-                toCheckIn(v);
-            }
-        });
+        return result;
     }
 
     public void toCheckIn(View view) {
         Log.d("Clicked", "checkin clicked");
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
->>>>>>> Change app icon and name
     }
 
     /**

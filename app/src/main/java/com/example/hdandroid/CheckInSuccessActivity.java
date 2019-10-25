@@ -15,6 +15,6 @@ public class CheckInSuccessActivity extends AppCompatActivity {
     }
 
     public void backToMain(View view) {
-        startActivity(new Intent(CheckInSuccessActivity.this, TabActivity.class));
+        startActivity(new Intent(CheckInSuccessActivity.this, MainActivity.class));
     }
 }

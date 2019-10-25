@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -36,10 +37,13 @@ public class LoginActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child(firstName.getText().toString() + " " + lastName.getText().toString()).setValue(user);
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(getString(R.string.is_checked_in), "true");
-        editor.commit();
+        //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = sharedPref.edit();
+
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("settings", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("is_checked_in", "true");
+        editor.apply();
 
         startActivity(new Intent(LoginActivity.this, CheckInSuccessActivity.class));
     }
