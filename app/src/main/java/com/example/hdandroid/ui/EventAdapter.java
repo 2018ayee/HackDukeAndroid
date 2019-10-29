@@ -1,6 +1,8 @@
 package com.example.hdandroid.ui;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder> {
     private Schedule[] mDataset;
+    private final OnItemClickListener mListener;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -29,12 +32,23 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
             mTime = (TextView) v.findViewById(R.id.schedule_time);
             mLocation = (TextView) v.findViewById(R.id.schedule_location);
         }
+
+        public void bind(final Schedule item, final OnItemClickListener listener) {
+            mTitle.setText(item.title);
+            mTime.setText(item.time);
+            mLocation.setText(item.location);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
+        }
     }
 
-
     // Provide a suitable constructor (depends on the kind of dataset)
-    public EventAdapter(Schedule[] myDataset) {
+    public EventAdapter(Schedule[] myDataset, OnItemClickListener listener) {
         mDataset = myDataset;
+        mListener = listener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -56,6 +70,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         holder.mTitle.setText(mDataset[position].title);
         holder.mTime.setText(mDataset[position].time);
         holder.mLocation.setText(mDataset[position].location);
+        holder.bind(mDataset[position], mListener);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
