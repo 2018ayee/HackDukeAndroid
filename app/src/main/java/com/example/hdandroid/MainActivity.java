@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(a);
                         break;
                     case R.id.navigation_dashboard:
-                        Intent b = new Intent(MainActivity.this,HelpActivity.class);
+                        Intent b = new Intent(MainActivity.this,MainActivity.class);
                         startActivity(b);
                         break;
                     case R.id.navigation_map:
-                        Intent c = new Intent(MainActivity.this,HelpActivity.class);
+                        Intent c = new Intent(MainActivity.this,MainActivity.class);
                         startActivity(c);
                         break;
                 }
