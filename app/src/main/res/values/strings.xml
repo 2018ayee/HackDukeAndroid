@@ -17,27 +17,31 @@
     <string name="dukePoliceNumber">(919) 684-2444</string>
 
     <plurals name="days">
-    <item quantity="zero">%d Days</item>
-    <item quantity="one">%d Day</item>
-    <item quantity="other">%d Days</item>
+        <item quantity="zero">%d Days</item>
+        <item quantity="one">%d Day</item>
+        <item quantity="other">%d Days</item>
     </plurals>
 
     <plurals name="hours">
-    <item quantity="zero">%d Hours</item>
-    <item quantity="one">%d Hour</item>
-    <item quantity="other">%d Hours</item>
+        <item quantity="zero">%d Hours</item>
+        <item quantity="one">%d Hour</item>
+        <item quantity="other">%d Hours</item>
     </plurals>
 
     <plurals name="minutes">
-    <item quantity="zero">%d Minutes</item>
-    <item quantity="one">%d Minute</item>
-    <item quantity="other">%d Minutes</item>
+        <item quantity="zero">%d Minutes</item>
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minutes</item>
     </plurals>
 
     <plurals name="seconds">
-    <item quantity="zero">%d Seconds</item>
-    <item quantity="one">%d Second</item>
-    <item quantity="other">%d Seconds</item>
+        <item quantity="zero">%d Seconds</item>
+        <item quantity="one">%d Second</item>
+        <item quantity="other">%d Seconds</item>
     </plurals>
+    <string name="title_activity_schedule">Schedule</string>
+    <string name="tab_text_1">Saturday</string>
+    <string name="tab_text_2">Sunday</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

@@ -20,10 +20,8 @@ import java.util.concurrent.TimeUnit;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-
 import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView countdown;
     TextView alreadyCheckedIn;
     Button checkInButton;
+    BottomNavigationView bottomNavigationView;
 
 
     @Override
@@ -76,6 +75,35 @@ public class MainActivity extends AppCompatActivity {
             checkInButton.setVisibility(View.GONE);
             alreadyCheckedIn.setVisibility(View.VISIBLE);
         }
+
+        bottomNavigationView = findViewById(R.id.nav_view);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Log.d("Clicked", "bottomNavClicked");
+                if (item.getItemId() == R.id.navigation_schedule) {
+                    // on schedule clicked
+                    Log.d("Clicked", "schedule clicked");
+                    Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                else if( item.getItemId() == R.id.navigation_map) {
+                    Log.d("Clicked", "map clicked");
+                    Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                else {
+                    Log.d("Clicked", "help clicked");
+                    Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+            }
+        });
+
 
     }
 
