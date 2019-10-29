@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="485dp"
+        android:layout_height="1231dp"
+        android:background="#009FA2"
+        tools:layout_editor_absoluteX="-18dp"
+        tools:layout_editor_absoluteY="-3dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </FrameLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/backButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="backToMain"
+        android:shadowColor="#009FA2"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/emergency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="24dp"
+        android:text="Help"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/emergency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/cabin_semibold" />
+
+    <TextView
+        android:id="@+id/emergency"
+        android:layout_width="370sp"
+        android:layout_height="114sp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help" />
+
+    <TextView
+        android:id="@+id/generalCommunication"
+        android:layout_width="370sp"
+        android:layout_height="179sp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@android:color/white"
+        android:foregroundGravity="center|center_horizontal"
+        android:gravity="center|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emergency" />
+
+    <TextView
+        android:id="@+id/FAQs"
+        android:layout_width="370sp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@android:color/white"
+        android:isScrollContainer="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generalCommunication" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:fillViewport="true"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbarFadeDuration="250"
+        android:scrollbarSize="3dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generalCommunication">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/FAQsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="8dp"
+                android:text="FAQs"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif-black"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/prizes"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:text="Prizes?"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/prizesText"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:text="The grand prizes are donations under your name to charities and causes! There will be grand prize winners for each track, novice track and many other company sponsored API prizes as well."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whatMake"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="What can I make?"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whatText"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="Bring your own ethernet cables (or you can just use WiFi) and bring any Nerf gun arsenal you have!"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/who"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="Who can I work with?"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whoText"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="Anyone! Get to know your fellow programmers better from your own and other schools! The only request is that you make a new friend by talking to each other, our mentors and our experts!"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whatMakeText"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="We welcome all software and hardware hacks that align to our tracks for impact. We will also have lab spaces for hardware hackers."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/what"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="What to Bring?"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whenWhere"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="When? Where?"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/whenWhereText"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:text="HackDuke starts Saturday, Nov 2nd at 9:00 AM and ends on Sunday,m Nov 3rd at 5:30 PM. It is hosted on Duke University's West Campus, in and around the Fitzpatrick Engineering Building."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:fontFamily="sans-serif" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/emergencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:text="Emergency"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dukePoliceText"
+        app:layout_constraintEnd_toEndOf="@+id/emergency"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emergency"
+        app:layout_constraintTop_toTopOf="@+id/emergency"
+        tools:fontFamily="sans-serif-black" />
+
+    <TextView
+        android:id="@+id/dukePoliceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Duke Police"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/emergency"
+        app:layout_constraintTop_toBottomOf="@+id/emergencyText"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/dukePoliceNumber"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="49dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/dukePoliceNumber"
+        android:textColor="#1676FF"
+        app:layout_constraintStart_toEndOf="@+id/dukePoliceText"
+        app:layout_constraintTop_toTopOf="@+id/emergency"
+        tools:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/durhamPoliceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Durham Police"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/emergency"
+        app:layout_constraintTop_toBottomOf="@+id/dukePoliceText"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/durhamPoliceNumber"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="911 (Emergency)"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/emergency"
+        app:layout_constraintStart_toEndOf="@+id/durhamPoliceText"
+        app:layout_constraintTop_toTopOf="@+id/emergency"
+        tools:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/vickisCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Vicki's Cell Number:"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/generalCommunication"
+        app:layout_constraintTop_toBottomOf="@+id/samsCell"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/vickisNumber"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="(908) 938-8667"
+        android:textColor="#1676FF"
+        app:layout_constraintEnd_toEndOf="@+id/generalCommunication"
+        app:layout_constraintStart_toEndOf="@+id/vickisCell"
+        app:layout_constraintTop_toTopOf="@+id/generalCommunication"
+        tools:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/generalCommunicationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:text="General Communication"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/generalCommunication"
+        app:layout_constraintTop_toTopOf="@+id/generalCommunication"
+        tools:fontFamily="sans-serif-black" />
+
+    <TextView
+        android:id="@+id/samsCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Sam's Cell Number:"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/generalCommunication"
+        app:layout_constraintTop_toBottomOf="@+id/generalCommunicationText"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/samsNumber"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="(410) 428-2378"
+        android:textColor="#1676FF"
+        app:layout_constraintEnd_toEndOf="@+id/generalCommunication"
+        app:layout_constraintStart_toEndOf="@+id/samsCell"
+        app:layout_constraintTop_toTopOf="@+id/generalCommunication"
+        tools:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/slackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Slack Link:"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/generalCommunication"
+        app:layout_constraintTop_toBottomOf="@+id/vickisCell"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/slackLink"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="tinyurl.com/JoinHDSlack"
+        android:textAllCaps="false"
+        android:textColor="#1676FF"
+        app:layout_constraintEnd_toEndOf="@+id/generalCommunication"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@+id/slackText"
+        app:layout_constraintTop_toBottomOf="@+id/vickisNumber"
+        tools:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/devpostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Devpost Link:"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/generalCommunication"
+        app:layout_constraintTop_toBottomOf="@+id/slackText"
+        tools:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/devpostLink"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:shadowColor="#FFFFFF"
+        android:text="hackduke-2019.devpost.com"
+        android:textAllCaps="false"
+        android:textColor="#1676FF"
+        app:layout_constraintEnd_toEndOf="@+id/generalCommunication"
+        app:layout_constraintStart_toEndOf="@+id/devpostText"
+        app:layout_constraintTop_toBottomOf="@+id/slackLink"
+        tools:fontFamily="sans-serif" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="is_checked_in">false</string>
+    <string name="dukePoliceNumber">(919) 684-2444</string>
 
     <plurals name="days">
     <item quantity="zero">%d Days</item>

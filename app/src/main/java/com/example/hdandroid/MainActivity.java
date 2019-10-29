@@ -1,5 +1,6 @@
 package com.example.hdandroid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -7,6 +8,7 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,7 +21,12 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationMenu;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 public class MainActivity extends AppCompatActivity {
+
 
     TextView countdown;
     TextView alreadyCheckedIn;
@@ -33,6 +40,28 @@ public class MainActivity extends AppCompatActivity {
         countdown = findViewById(R.id.countdown);
         alreadyCheckedIn = findViewById(R.id.textView6);
         checkInButton = findViewById(R.id.checkin);
+        BottomNavigationView navigation = findViewById(R.id.nav_view);
+
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_help:
+                        Intent a = new Intent(MainActivity.this,HelpActivity.class);
+                        startActivity(a);
+                        break;
+                    case R.id.navigation_dashboard:
+                        Intent b = new Intent(MainActivity.this,HelpActivity.class);
+                        startActivity(b);
+                        break;
+                    case R.id.navigation_map:
+                        Intent c = new Intent(MainActivity.this,HelpActivity.class);
+                        startActivity(c);
+                        break;
+                }
+                return false;
+            }
+        });
 
         checkInButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
