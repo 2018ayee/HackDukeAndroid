@@ -36,6 +36,7 @@ public class HelpActivity extends AppCompatActivity {
     Button samsNumber;
     Button slackLink;
     Button devpostLink;
+    Button privacyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class HelpActivity extends AppCompatActivity {
 
         callDukePolice = findViewById(R.id.dukePoliceNumber);
         backButton = findViewById(R.id.backButton);
+        privacyButton = findViewById(R.id.privacyButton);
         vickisNumber = findViewById(R.id.vickisNumber);
         samsNumber = findViewById(R.id.samsNumber);
         slackLink = findViewById(R.id.slackLink);
@@ -53,6 +55,16 @@ public class HelpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("Clicked", "backButton clicked");
                 toMain(v);
+            }
+        });
+
+        privacyButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://app.termly.io/document/privacy-policy/227859db-1da0-461c-a950-f951d3281caf"));
+                startActivity(intent);
             }
         });
 
