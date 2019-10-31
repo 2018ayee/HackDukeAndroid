@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
@@ -65,7 +66,11 @@ public class MainActivity extends AppCompatActivity {
         checkInButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.d("Clicked", "checkin clicked");
-                toCheckIn(v);
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://hackduke.typeform.com/to/vwGW81"));
+                startActivity(intent);
             }
         });
 
@@ -122,11 +127,7 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
-    public void toCheckIn(View view) {
-        Log.d("Clicked", "checkin clicked");
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
+
 
     /**
      * Returns a formatted string containing the amount of time (days, hours,
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         long timeRemaining = futureDate.getTime() - new Date().getTime();
 
         // If there is no time between (ie. the date is now or in the past), do nothing
-        if (timeRemaining > 0) {
+        if (timeRemaining != 0) {
             Resources resources = context.getResources();
 
             // Calculate the days/hours/minutes/seconds within the time difference.
@@ -175,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
             if (days > 0 || hours > 0 || minutes > 0 || seconds > 0) {
                 countdownText.append(resources.getQuantityString(R.plurals.seconds, seconds, seconds));
                 countdownText.append(" ");
+            }
+            if (seconds <= 0){
+                countdownText.append("Code for Good has started!");
             }
         }
 
@@ -217,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             try {
-                Date futureDate = StringToDate("2019-11-02 9:00:00");
+                Date futureDate = StringToDate("2019-10-31 7:32:30");
                 countdown.setText(getCountdownText(countdown.getContext(), futureDate));
             } finally {
                 countdownHandler.postDelayed(updateCountdown, COUNTDOWN_UPDATE_INTERVAL);
