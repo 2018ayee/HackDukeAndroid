@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             try {
-                Date futureDate = StringToDate("2019-10-31 7:32:30");
+                Date futureDate = StringToDate("2019-11-02 11:00:00");
                 countdown.setText(getCountdownText(countdown.getContext(), futureDate));
             } finally {
                 countdownHandler.postDelayed(updateCountdown, COUNTDOWN_UPDATE_INTERVAL);
